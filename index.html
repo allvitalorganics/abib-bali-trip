@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FIRST LIGHT · Abib × Sensitive Ones · Bali, July 2026</title>
+<meta name="description" content="A 4-creator destination content campaign in Bali for Abib. Sensitive Ones Agency, mid-July 2026.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='12' fill='%23127139'/%3E%3C/svg%3E">
+<style>
+:root {
+  --accent: #127139;
+  --accent-deep: #0E5A2D;
+  --accent-darker: #0A4524;
+  --accent-soft: rgba(18, 113, 57, 0.06);
+  --accent-soft-2: rgba(18, 113, 57, 0.12);
+  --accent-line: rgba(18, 113, 57, 0.18);
+  --honey: #D9A441;
+  --honey-soft: rgba(217, 164, 65, 0.10);
+  --honey-line: rgba(217, 164, 65, 0.30);
+  --bg: #FAF7F0;
+  --bg-card: #FFFFFF;
+  --bg-section: #F4F0E6;
+  --bg-dark: #0F1A14;
+  --muted-bg: #EFEAE0;
+  --text: #1A1A1A;
+  --text-mid: #555555;
+  --text-soft: #8A8A8A;
+  --border: rgba(0, 0, 0, 0.08);
+  --sans: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Pretendard", "Noto Sans KR", sans-serif;
+
+  --fs-h1: clamp(36px, 5.5vw + 8px, 72px);
+  --fs-h2: clamp(26px, 2.8vw + 8px, 42px);
+  --fs-h3: clamp(18px, 1.4vw + 8px, 24px);
+  --fs-lead: clamp(15px, 1vw + 6px, 20px);
+  --fs-body: clamp(13px, 0.4vw + 11px, 15px);
+
+  --pad-section: clamp(60px, 7vw, 100px);
+  --pad-container: clamp(20px, 3vw + 8px, 32px);
+  --gap-grid: clamp(12px, 1vw + 6px, 18px);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--bg);
+  font-family: var(--sans);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  font-size: var(--fs-body);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.nav {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(250, 247, 240, 0.92);
+  backdrop-filter: saturate(180%) blur(20px);
+  border-bottom: 1px solid var(--border);
+}
+.nav-inner {
+  max-width: 1180px; margin: 0 auto;
+  padding: 12px var(--pad-container);
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+}
+.brand { display: flex; align-items: center; gap: 8px; }
+.brand .dot { width: 8px; height: 8px; background: var(--accent); border-radius: 50%; flex-shrink: 0; }
+.brand .name { font-size: 11px; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase; }
+.cobrand-pill {
+  font-size: 9px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
+  padding: 4px 9px; background: var(--honey-soft); color: var(--honey);
+  border-radius: 100px; border: 1px solid var(--honey-line); white-space: nowrap;
+}
+.nav-links { display: flex; gap: clamp(14px, 1.5vw, 22px); }
+.nav-links a {
+  font-size: 12px; font-weight: 500; color: var(--text-mid); text-decoration: none;
+  letter-spacing: 0.4px; white-space: nowrap;
+}
+.nav-links a:hover { color: var(--accent); }
+.nav-status {
+  font-size: 9px; font-weight: 700; color: var(--accent);
+  letter-spacing: 1.5px; text-transform: uppercase;
+  padding: 4px 10px; border: 1px solid var(--accent); border-radius: 100px;
+  white-space: nowrap;
+}
+
+.section { padding: var(--pad-section) 0; position: relative; }
+.section.alt { background: var(--bg-section); }
+.section.dark { background: var(--bg-dark); color: white; }
+.container { max-width: 1180px; margin: 0 auto; padding: 0 var(--pad-container); position: relative; }
+.section-num {
+  font-size: 11px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase;
+  color: var(--accent); margin-bottom: 18px; opacity: 0.85;
+  display: flex; gap: 12px; align-items: center;
+}
+.section-num::before { content: ""; display: block; width: 28px; height: 2px; background: var(--accent); }
+
+.h1 { font-size: var(--fs-h1); font-weight: 700; line-height: 0.98; letter-spacing: -1.5px; }
+.h1 .accent { color: var(--accent); }
+.h2 { font-size: var(--fs-h2); font-weight: 700; line-height: 1.05; letter-spacing: -0.8px; }
+.h2 .accent { color: var(--accent); }
+.h3 { font-size: var(--fs-h3); font-weight: 700; line-height: 1.2; letter-spacing: -0.3px; }
+.lead { font-size: var(--fs-lead); font-weight: 400; color: var(--text-mid); line-height: 1.55; max-width: 780px; }
+
+/* HERO */
+.hero {
+  padding: clamp(80px, 10vw, 140px) 0 clamp(56px, 7vw, 96px);
+  position: relative; overflow: hidden;
+  border-bottom: 1px solid var(--border);
+}
+.hero::after {
+  content: ""; position: absolute; top: -100px; right: -100px;
+  width: clamp(320px, 42vw, 540px); height: clamp(320px, 42vw, 540px);
+  background: radial-gradient(circle, var(--honey-soft) 0%, transparent 70%);
+  border-radius: 50%; pointer-events: none;
+}
+.hero::before {
+  content: ""; position: absolute; bottom: -100px; left: -100px;
+  width: clamp(280px, 36vw, 440px); height: clamp(280px, 36vw, 440px);
+  background: radial-gradient(circle, var(--accent-soft-2) 0%, transparent 70%);
+  border-radius: 50%; pointer-events: none;
+}
+.hero-eyebrow {
+  font-size: 12px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase;
+  color: var(--honey); margin-bottom: 18px;
+  position: relative; z-index: 2;
+}
+.hero h1 { position: relative; z-index: 2; max-width: 1020px; margin-bottom: 18px; }
+.hero .lead { position: relative; z-index: 2; max-width: 760px; }
+.hero-stats {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: clamp(14px, 1.6vw, 22px);
+  margin-top: clamp(40px, 5vw, 64px); padding-top: clamp(24px, 3vw, 36px);
+  border-top: 1px solid var(--border);
+  position: relative; z-index: 2;
+}
+.hero-stats .item .num {
+  font-size: clamp(26px, 1.8vw + 12px, 38px); font-weight: 700;
+  color: var(--accent); letter-spacing: -0.5px; line-height: 1;
+}
+.hero-stats .item .label {
+  font-size: 11px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase;
+  color: var(--text); margin-top: 8px;
+}
+.hero-stats .item .sub {
+  font-size: 12px; color: var(--text-mid); margin-top: 2px;
+}
+
+/* CONCEPT CARDS */
+.concept-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: var(--gap-grid); margin-top: clamp(36px, 4vw, 56px);
+}
+.concept-card {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: 14px; padding: clamp(24px, 2vw + 12px, 32px);
+  display: flex; flex-direction: column; gap: 12px;
+}
+.concept-card .concept-num {
+  font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
+  color: var(--accent);
+}
+.concept-card p { font-size: 13.5px; color: var(--text-mid); line-height: 1.65; }
+
+.statement {
+  margin-top: clamp(36px, 4vw, 56px);
+  padding: clamp(24px, 3vw + 8px, 36px);
+  background: var(--bg-card); border-left: 4px solid var(--honey);
+  border-radius: 0 14px 14px 0;
+  font-size: clamp(16px, 0.8vw + 10px, 20px); font-weight: 500;
+  color: var(--text); line-height: 1.55; max-width: 900px;
+}
+.statement .cite {
+  display: block; margin-top: 10px;
+  font-size: 12px; color: var(--text-soft); font-weight: 500; font-style: italic;
+}
+
+/* CREATOR CARDS */
+.creator-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: var(--gap-grid); margin-top: clamp(36px, 4vw, 52px);
+}
+.creator-card {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: 14px; padding: clamp(22px, 2vw + 10px, 28px);
+  display: flex; flex-direction: column; gap: 10px;
+}
+.creator-card.tbd {
+  border: 2px dashed var(--text-soft); background: var(--muted-bg);
+}
+.creator-card .gender-tag {
+  font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
+  color: var(--accent); align-self: flex-start;
+}
+.creator-card.tbd .gender-tag { color: var(--text-soft); }
+.creator-card .name {
+  font-size: clamp(17px, 0.9vw + 10px, 21px); font-weight: 800;
+  letter-spacing: -0.3px; line-height: 1.2;
+}
+.creator-card .handle {
+  font-size: 12px; font-weight: 600; color: var(--text-mid);
+  font-variant-numeric: tabular-nums;
+}
+.creator-card .reach {
+  font-size: clamp(20px, 1.2vw + 10px, 26px); font-weight: 800;
+  color: var(--accent); letter-spacing: -0.4px;
+  font-variant-numeric: tabular-nums;
+  margin-top: 6px;
+}
+.creator-card .reach-sub {
+  font-size: 11px; font-weight: 600; color: var(--text-soft);
+  letter-spacing: 0.3px; text-transform: uppercase;
+}
+.creator-card p {
+  font-size: 12.5px; color: var(--text-mid); line-height: 1.6;
+  padding-top: 10px; margin-top: auto;
+  border-top: 1px solid var(--border);
+}
+
+/* PRODUCT CARDS */
+.product-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: var(--gap-grid); margin-top: clamp(36px, 4vw, 52px);
+}
+.product-card {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: 12px; padding: clamp(18px, 1.6vw + 8px, 22px);
+  display: flex; flex-direction: column; gap: 8px;
+}
+.product-card.hero-product {
+  border-left: 4px solid var(--honey);
+  background: linear-gradient(180deg, var(--honey-soft) 0%, var(--bg-card) 50%);
+}
+.product-card .product-cat {
+  font-size: 9px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
+  color: var(--accent);
+}
+.product-card.hero-product .product-cat { color: var(--honey); }
+.product-card .product-name {
+  font-size: 14px; font-weight: 700; line-height: 1.3; letter-spacing: -0.2px;
+}
+.product-card .product-name-kr {
+  font-size: 12px; font-weight: 500; color: var(--text-mid);
+}
+.product-card .product-price {
+  font-size: 14px; font-weight: 700; color: var(--accent-deep);
+  font-variant-numeric: tabular-nums;
+  margin-top: 4px;
+  padding-top: 8px; border-top: 1px solid var(--border);
+}
+.product-card .product-note {
+  font-size: 11px; color: var(--text-mid); margin-top: 2px; font-style: italic;
+}
+
+/* DELIVERABLES */
+.deliverables-grid {
+  display: grid; grid-template-columns: 1fr 1fr 1fr;
+  gap: var(--gap-grid); margin-top: clamp(36px, 4vw, 56px);
+}
+.deliv-card {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: 14px; padding: clamp(24px, 2vw + 12px, 32px);
+  display: flex; flex-direction: column; gap: 10px;
+}
+.deliv-card .deliv-num {
+  font-size: clamp(36px, 2.4vw + 14px, 48px); font-weight: 800;
+  color: var(--accent); letter-spacing: -1px; line-height: 1;
+}
+.deliv-card h3 {
+  font-size: 17px; font-weight: 800; line-height: 1.3; letter-spacing: -0.3px;
+  margin-top: 4px;
+}
+.deliv-card p { font-size: 13px; color: var(--text-mid); line-height: 1.6; }
+
+/* PACKAGE / MERCH cards */
+.split-2 {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: var(--gap-grid); margin-top: clamp(36px, 4vw, 52px);
+}
+.split-card {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: 16px; padding: clamp(28px, 2.5vw + 12px, 40px);
+  display: flex; flex-direction: column; gap: 14px;
+}
+.split-card .split-eyebrow {
+  font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
+  color: var(--accent);
+}
+.split-card h3 {
+  font-size: clamp(20px, 1.2vw + 10px, 26px); font-weight: 800;
+  letter-spacing: -0.4px; line-height: 1.2;
+}
+.split-card p { font-size: 13.5px; color: var(--text-mid); line-height: 1.65; }
+.split-card ul { list-style: none; padding: 0; margin: 8px 0 0; }
+.split-card ul li {
+  font-size: 13px; color: var(--text); line-height: 1.55;
+  padding: 4px 0 4px 18px; position: relative;
+}
+.split-card ul li::before {
+  content: ""; position: absolute; left: 0; top: 12px;
+  width: 6px; height: 6px;
+  background: var(--accent); border-radius: 50%;
+}
+
+/* TIMELINE TABLE */
+.timeline-table {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: 12px; overflow: hidden;
+  margin-top: clamp(28px, 3vw, 40px);
+}
+.timeline-row {
+  display: grid; grid-template-columns: 140px 200px 1fr;
+  align-items: center;
+  padding: clamp(14px, 1.4vw + 6px, 18px) clamp(20px, 2vw + 8px, 28px);
+  border-bottom: 1px solid var(--border); gap: 18px;
+}
+.timeline-row:last-child { border-bottom: none; }
+.timeline-row.highlight { background: var(--honey-soft); }
+.timeline-row .phase {
+  font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
+  color: var(--accent);
+}
+.timeline-row.highlight .phase { color: var(--honey); }
+.timeline-row .when {
+  font-size: 13px; font-weight: 700; color: var(--text);
+  font-variant-numeric: tabular-nums;
+}
+.timeline-row .what {
+  font-size: 13px; color: var(--text-mid); line-height: 1.5;
+}
+
+/* BUDGET BLOCK */
+.budget-block {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: 14px; overflow: hidden;
+  margin-top: clamp(36px, 4vw, 52px);
+}
+.budget-top {
+  padding: clamp(28px, 3vw + 12px, 40px);
+  display: grid; grid-template-columns: auto 1fr;
+  gap: clamp(28px, 3vw, 44px); align-items: center;
+  border-bottom: 1px solid var(--border);
+}
+.budget-top .total {
+  font-size: clamp(48px, 5vw + 14px, 84px); font-weight: 800;
+  color: var(--accent-deep); letter-spacing: -2px; line-height: 1;
+}
+.budget-top .total-label {
+  font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+  color: var(--text-soft); margin-top: 8px;
+}
+.budget-top p { font-size: clamp(14px, 0.6vw + 11px, 16px); color: var(--text); line-height: 1.6; }
+.budget-rows { padding: clamp(20px, 2vw + 8px, 28px); }
+.budget-row {
+  display: grid; grid-template-columns: 1fr auto;
+  align-items: center; gap: 18px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+}
+.budget-row:last-child { border-bottom: none; }
+.budget-row .item-name { font-size: 14px; font-weight: 600; color: var(--text); }
+.budget-row .item-note { font-size: 12px; color: var(--text-soft); margin-top: 2px; }
+.budget-row .item-amount {
+  font-size: 16px; font-weight: 700; color: var(--accent-deep);
+  font-variant-numeric: tabular-nums; white-space: nowrap;
+}
+
+/* WHY NOW grid */
+.why-grid {
+  display: grid; grid-template-columns: 1fr 1fr 1fr;
+  gap: var(--gap-grid); margin-top: clamp(36px, 4vw, 56px);
+}
+.why-card {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: 14px; padding: clamp(22px, 2vw + 10px, 28px);
+  display: flex; flex-direction: column; gap: 10px;
+  border-top: 4px solid var(--accent);
+}
+.why-card .why-tag {
+  font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
+  color: var(--accent);
+}
+.why-card h3 { font-size: 17px; font-weight: 800; line-height: 1.3; letter-spacing: -0.3px; }
+.why-card p { font-size: 13px; color: var(--text-mid); line-height: 1.65; }
+
+/* NEXT STEPS */
+.next-steps {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: 14px; padding: clamp(28px, 3vw + 12px, 40px);
+  margin-top: clamp(36px, 4vw, 52px);
+}
+.next-steps ol { list-style: none; padding: 0; margin: 0; counter-reset: step; }
+.next-steps ol li {
+  counter-increment: step; display: grid; grid-template-columns: 40px 1fr;
+  gap: 16px; padding: 14px 0; border-bottom: 1px solid var(--border);
+  align-items: center;
+}
+.next-steps ol li:last-child { border-bottom: none; }
+.next-steps ol li::before {
+  content: counter(step, decimal-leading-zero);
+  width: 40px; height: 40px; background: var(--accent-soft);
+  color: var(--accent); border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 13px; font-weight: 800;
+}
+.next-steps ol li .text { font-size: 14px; color: var(--text); line-height: 1.5; }
+
+/* FOOTER */
+.footer {
+  background: var(--bg-dark); color: white;
+  padding: clamp(56px, 6vw, 80px) 0 clamp(36px, 4vw, 48px);
+  position: relative;
+}
+.footer::before {
+  content: ""; position: absolute; top: 0; left: 0; right: 0; height: 4px;
+  background: linear-gradient(90deg, var(--accent) 0%, var(--honey) 100%);
+}
+.footer .container {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 32px; align-items: end;
+}
+.footer .signoff .who {
+  font-size: clamp(24px, 1.5vw + 14px, 32px); font-weight: 800; letter-spacing: -0.5px;
+}
+.footer .signoff .role { font-size: 13px; color: rgba(255,255,255,0.55); margin-top: 4px; }
+.footer .brand .name { color: white; }
+.footer .contact-block { display: flex; flex-direction: column; gap: 14px; font-size: 13px; color: rgba(255,255,255,0.7); line-height: 1.6; }
+.footer .contact-block .group { display: flex; flex-direction: column; gap: 3px; }
+.footer .contact-block .label {
+  font-size: 9px; font-weight: 700; letter-spacing: 1.8px; text-transform: uppercase;
+  color: rgba(255,255,255,0.4); margin-bottom: 4px;
+}
+.footer .contact-block a { color: white; text-decoration: none; word-break: break-word; }
+.footer .contact-block a:hover { color: var(--honey); }
+.footer-bottom-wrap { padding: 0 var(--pad-container); max-width: 1180px; margin: 0 auto; }
+.footer-bottom {
+  margin-top: clamp(40px, 5vw, 56px); padding-top: 24px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  font-size: 11px; color: rgba(255,255,255,0.4);
+  letter-spacing: 1.5px; text-transform: uppercase; text-align: center;
+}
+
+/* RESPONSIVE */
+@media (max-width: 880px) { .nav-links { display: none; } }
+@media (max-width: 720px) {
+  .concept-grid { grid-template-columns: 1fr; }
+  .creator-grid { grid-template-columns: 1fr 1fr; }
+  .deliverables-grid { grid-template-columns: 1fr; }
+  .split-2 { grid-template-columns: 1fr; }
+  .why-grid { grid-template-columns: 1fr; }
+  .timeline-row {
+    grid-template-columns: 1fr; gap: 4px; padding: 14px 18px;
+  }
+  .budget-top { grid-template-columns: 1fr; gap: 20px; }
+  .footer .container { grid-template-columns: 1fr; gap: 24px; }
+  .container, .nav-inner, .footer-bottom-wrap { padding-left: 18px; padding-right: 18px; }
+}
+@media (max-width: 520px) {
+  .cobrand-pill, .nav-status { display: none; }
+  .creator-grid { grid-template-columns: 1fr; }
+}
+@media print {
+  .nav { display: none; }
+  .section { padding: 32px 0; page-break-inside: avoid; }
+  body { background: white; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="brand">
+      <span class="dot"></span>
+      <span class="name">Sensitive Ones Agency</span>
+    </div>
+    <span class="cobrand-pill">× Abib · Bali</span>
+    <div class="nav-links">
+      <a href="#concept">Concept</a>
+      <a href="#creators">Creators</a>
+      <a href="#products">Products</a>
+      <a href="#deliverables">Output</a>
+      <a href="#package">Package</a>
+      <a href="#timeline">Timeline</a>
+      <a href="#budget">Budget</a>
+    </div>
+    <div class="nav-status">Concept v1</div>
+  </div>
+</nav>
+
+<!-- 01 · COVER -->
+<section class="hero" id="top">
+  <div class="container">
+    <div class="hero-eyebrow">Concept Proposal · Confidential · May 2026</div>
+    <h1 class="h1">FIRST <span class="accent">LIGHT.</span><br>Abib × Bali, July 2026.</h1>
+    <p class="lead">A four-creator destination content campaign in Bali for Abib. Sensitive Ones Agency producing. Four creators, three nights, six pieces of finished content. Built around Abib's brand essence — <em>"the first month"</em> — translated into a Bali sunrise visual language.</p>
+
+    <div class="hero-stats">
+      <div class="item">
+        <div class="num">4</div>
+        <div class="label">Creators</div>
+        <div class="sub">2 male · 2 female</div>
+      </div>
+      <div class="item">
+        <div class="num">3N / 4D</div>
+        <div class="label">Trip Length</div>
+        <div class="sub">Mid-July 2026</div>
+      </div>
+      <div class="item">
+        <div class="num">6</div>
+        <div class="label">Finished Pieces</div>
+        <div class="sub">4 solo + 1 collab + 1 long-form</div>
+      </div>
+      <div class="item">
+        <div class="num">5</div>
+        <div class="label">Abib Hero Lines</div>
+        <div class="sub">PDRN · Sunsticks · Lip Mask · Eye Patches · Pack-to-Foam</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 02 · THE CONCEPT -->
+<section class="section alt" id="concept">
+  <div class="container">
+    <div class="section-num">01 · The Concept</div>
+    <h2 class="h2"><span class="accent">FIRST LIGHT.</span><br>Abib's first moon, met by Bali's first sun.</h2>
+    <p class="lead" style="margin-top: 22px;">Abib means <em>"the first month"</em>. The brand essence is a return to the natural skin cycle, a quiet reset, a minimalism that earns its calm. Bali in July is the dry season — long mornings, low light, slow days. We took those two ideas and built the campaign on the literal overlap: the moment of first light each day.</p>
+
+    <div class="concept-grid">
+      <div class="concept-card">
+        <div class="concept-num">Pillar 01 · Visual Language</div>
+        <h3 class="h3">Golden hour as the brand canvas.</h3>
+        <p>Every piece of content shot in Bali's morning and golden-hour windows. Soft natural light. Skin-first composition. No artificial glow, no studio gloss. Lets Abib's minimalist DNA carry the aesthetic.</p>
+      </div>
+      <div class="concept-card">
+        <div class="concept-num">Pillar 02 · Product Integration</div>
+        <h3 class="h3">Morning ritual as the through-line.</h3>
+        <p>The Abib hero lineup naturally maps onto a Bali sunrise routine. Wake up · cleanse with pack-to-foam · eye patch as the coffee · sunstick as the threshold step before the day · lip mask before the pool. Product in context, not on a backdrop.</p>
+      </div>
+      <div class="concept-card">
+        <div class="concept-num">Pillar 03 · Restraint</div>
+        <h3 class="h3">Less, in Bali.</h3>
+        <p>No spectacle. No staged influencer-trip chaos. Four creators, three nights, real downtime, real shots. Abib's "less is more" principle applied to the campaign itself — fewer creators, fewer posts, more density per piece.</p>
+      </div>
+    </div>
+
+    <div class="statement">
+      "The perfection will be completed when there's nothing to take out without the necessity of adding something."
+      <span class="cite">— Abib brand statement, en.abib.com/pages/brand</span>
+    </div>
+  </div>
+</section>
+
+<!-- 03 · THE CREATORS -->
+<section class="section" id="creators">
+  <div class="container">
+    <div class="section-num">02 · The Creators</div>
+    <h2 class="h2">Four creators. <span class="accent">Two male, two female.</span></h2>
+    <p class="lead" style="margin-top: 22px;">A small group is the entire point. Each creator gets enough air to make their own content, but the group is small enough to create a real "moment" — the kind that pulls audiences in because they recognize people they already follow showing up at the same place.</p>
+
+    <div class="creator-grid">
+      <div class="creator-card">
+        <div class="gender-tag">Male · Confirmed</div>
+        <div class="name">Daesung Seo</div>
+        <div class="handle">@daesungseo98</div>
+        <div class="reach">2.6M</div>
+        <div class="reach-sub">Combined reach · NY-based</div>
+        <p>Co-founder of Sensitive Ones. Korean-American voice. Trust-led skincare content. Bridges Korea and US audience naturally.</p>
+      </div>
+      <div class="creator-card">
+        <div class="gender-tag">Male · Confirmed</div>
+        <div class="name">Kai Lee</div>
+        <div class="handle">@hwaniie__</div>
+        <div class="reach">4.2M</div>
+        <div class="reach-sub">Combined reach · NY-based</div>
+        <p>Romantic lifestyle aesthetic. Beauty-native content. Frequent Daesung collaborator — the duo crosspost is one of the strongest viral levers on the roster.</p>
+      </div>
+      <div class="creator-card">
+        <div class="gender-tag">Female · Confirmed</div>
+        <div class="name">Jumy (Jumybear)</div>
+        <div class="handle">@jumybear</div>
+        <div class="reach">1.5M+</div>
+        <div class="reach-sub">Combined reach</div>
+        <p>Beauty + lifestyle. Warm, naturally-lit content style aligns directly with the First Light visual concept. Largest single solo reach in this lineup.</p>
+      </div>
+      <div class="creator-card tbd">
+        <div class="gender-tag">Female · TBD</div>
+        <div class="name">Creator #4</div>
+        <div class="handle">handpicked for fit</div>
+        <div class="reach">TBD</div>
+        <div class="reach-sub">Sourced to brief</div>
+        <p>Sourcing in progress. Targeting a US-based female creator with a calm/minimal aesthetic to balance Jumy's energy and round out the visual range. Confirmed in Discovery call.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 04 · HERO PRODUCTS -->
+<section class="section alt" id="products">
+  <div class="container">
+    <div class="section-num">03 · The Products</div>
+    <h2 class="h2">Five Abib lines, one Bali context.</h2>
+    <p class="lead" style="margin-top: 22px;">The products Abib wants pushed already fit a Bali morning ritual on their own. We don't have to invent integration — we just need to film what's already true. Hero focus on the PDRN line (currently mid-launch) and the sunsticks (peak summer relevance).</p>
+
+    <div class="product-grid">
+      <div class="product-card hero-product">
+        <div class="product-cat">★ Hot Launch</div>
+        <div class="product-name">PDRN Volume fill-it Booster crème 2.5 Tube</div>
+        <div class="product-name-kr">PDRN 보르피린 크림</div>
+        <div class="product-price">$28 · $21 sale</div>
+        <div class="product-note">"10K sold worldwide in first month — ~1 unit every 6 minutes." 4th pre-order open.</div>
+      </div>
+      <div class="product-card hero-product">
+        <div class="product-cat">★ Summer Hero</div>
+        <div class="product-name">Airy Sunstick Smoothing Bar</div>
+        <div class="product-name-kr">선스틱 에어리</div>
+        <div class="product-price">$28 · $21 sale</div>
+        <div class="product-note">SPF 50+. Daily threshold step before pool or beach.</div>
+      </div>
+      <div class="product-card hero-product">
+        <div class="product-cat">★ Summer Hero</div>
+        <div class="product-name">Quick Sunstick Protection Bar</div>
+        <div class="product-name-kr">선스틱 퀵</div>
+        <div class="product-price">$28 · $21 sale</div>
+        <div class="product-note">SPF 50+. Reapplication-friendly format.</div>
+      </div>
+      <div class="product-card">
+        <div class="product-cat">Eye · 부활초</div>
+        <div class="product-name">Vegan Collagen Eye Patch Jericho Rose Jelly</div>
+        <div class="product-name-kr">아이패치 부활초</div>
+        <div class="product-price">$23</div>
+      </div>
+      <div class="product-card">
+        <div class="product-cat">Eye · PDRN</div>
+        <div class="product-name">PDRN Retinal Eye Patch Glow Jelly</div>
+        <div class="product-name-kr">아이패치 PDRN</div>
+        <div class="product-price">$23</div>
+      </div>
+      <div class="product-card">
+        <div class="product-cat">Eye · Glutathione</div>
+        <div class="product-name">Glutathione Dark Spot Wrapping Mask</div>
+        <div class="product-name-kr">아이패치 글루타치온</div>
+        <div class="product-price">$28</div>
+      </div>
+      <div class="product-card">
+        <div class="product-cat">Lip Care</div>
+        <div class="product-name">PDRN Vegan Collagen Lip Mask Glazed Jelly</div>
+        <div class="product-name-kr">PDRN 립마스크</div>
+        <div class="product-price">$20</div>
+      </div>
+      <div class="product-card">
+        <div class="product-cat">Cleanser</div>
+        <div class="product-name">Pack-to-Foam Cleanser</div>
+        <div class="product-name-kr">팩투폼</div>
+        <div class="product-price">Abib core line</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 05 · DELIVERABLES -->
+<section class="section" id="deliverables">
+  <div class="container">
+    <div class="section-num">04 · The Output</div>
+    <h2 class="h2">Six finished pieces of content. <span class="accent">Made deliberately.</span></h2>
+    <p class="lead" style="margin-top: 22px;">A small, considered output. No overproduction. Each creator gets one solo short-form to own a hero product. One collab short-form binds the group. One long-form recap carries the trip narrative from start to finish.</p>
+
+    <div class="deliverables-grid">
+      <div class="deliv-card">
+        <div class="deliv-num">4</div>
+        <h3>Solo Short-Form</h3>
+        <p>One short-form video per creator (TikTok + Instagram Reels cross-post). Each one anchored on a different Abib hero product. Creator chooses their own angle within the FIRST LIGHT visual framework — morning ritual, beach moment, sunset wind-down, room reset.</p>
+      </div>
+      <div class="deliv-card">
+        <div class="deliv-num">1</div>
+        <h3>Collab Short-Form</h3>
+        <p>One short-form video with all four creators together. Group "moment" content — the Abib package reveal, a sunrise scene, an evening together, or the merch drop unboxing. The piece that signals to followers that a real campaign is happening.</p>
+      </div>
+      <div class="deliv-card">
+        <div class="deliv-num">1</div>
+        <h3>Long-Form Trip Film</h3>
+        <p>One long-form recap of the entire trip. YouTube + Reels long edit. Trip narrative arc, behind the scenes, all four creators together, Abib hosting visible in the experience. The piece that becomes the anchor case study and gets reused across Abib's owned channels.</p>
+      </div>
+    </div>
+
+    <div class="statement">
+      Tarte's #trippinwithtarte trips generate <strong>100M+ impressions per trip</strong>. Our scale is intentionally smaller — four creators, six finished pieces — targeting <strong>10M–30M combined impressions</strong> across the campaign window at a fraction of the production cost.
+      <span class="cite">— Tarte benchmark cited by @nataliebarbu (Dec 2025) · 100M+ impressions per trip</span>
+    </div>
+  </div>
+</section>
+
+<!-- 06 · PERSONALIZED PACKAGE -->
+<section class="section alt" id="package">
+  <div class="container">
+    <div class="section-num">05 · The Package</div>
+    <h2 class="h2">A personal Abib package. <span class="accent">Waiting in the room.</span></h2>
+    <p class="lead" style="margin-top: 22px;">Each creator walks into their room and finds a personalized Abib package — designed for them, tied to the trip. The "First Light" set: curated products in custom packaging, a personal note, a piece of branded merch. The room is lightly styled to match. Captures itself.</p>
+
+    <div class="split-2">
+      <div class="split-card">
+        <div class="split-eyebrow">The Welcome Package</div>
+        <h3>"First Light Set"</h3>
+        <p>Curated for each creator. Same core, personalized accents. The unboxing IS the first content moment of the trip — built to be filmed naturally on arrival.</p>
+        <ul>
+          <li>Both sunsticks (Airy + Quick) — pre-trip skin priming</li>
+          <li>PDRN Volume fill-it Booster crème — the "after sun" reset</li>
+          <li>PDRN lip mask + an eye patch of their choosing</li>
+          <li>Pack-to-foam cleanser — travel-format ritual</li>
+          <li>Custom merch piece (T-shirt or hat from the campaign drop)</li>
+          <li>Hand-written note from the Abib team</li>
+        </ul>
+      </div>
+      <div class="split-card">
+        <div class="split-eyebrow">The Future Product Hook</div>
+        <h3>"Abib Bali" set, ready for retail.</h3>
+        <p>The package concept doesn't end with the trip. The exact "First Light Set" — minus the personalization — becomes a real Abib product offering on the site afterward. Could be sold as a flat set ("Abib Bali Kit"), or as creator-curated edits ("Abib × Jumy Bali Edit"), or both.</p>
+        <ul>
+          <li>Drop alongside trip content (late July / early August)</li>
+          <li>Limited edition framing — ties future-product to creator credibility</li>
+          <li>Pre-built bundle for Olive Young and US Amazon — no additional photography needed beyond the trip output</li>
+          <li>Creator-edition versions extend campaign life across Q3</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 07 · MERCH -->
+<section class="section" id="merch">
+  <div class="container">
+    <div class="section-num">06 · The Merch</div>
+    <h2 class="h2">Custom "Abib × Bali" merch. <span class="accent">Worn naturally on the trip.</span></h2>
+    <p class="lead" style="margin-top: 22px;">A small, focused custom merch drop designed specifically for this campaign. Worn by the four creators throughout the trip — so the campaign mark shows up organically in every piece of content, no overlay needed.</p>
+
+    <div class="concept-grid">
+      <div class="concept-card">
+        <div class="concept-num">Merch 01 · Wearable</div>
+        <h3 class="h3">T-shirts + hats</h3>
+        <p>Co-branded Abib × Bali tee + cap. Subtle. Cream tone, simple type, designed to match the visual aesthetic — not loud branded merch.</p>
+      </div>
+      <div class="concept-card">
+        <div class="concept-num">Merch 02 · Print</div>
+        <h3 class="h3">Posters + welcome cards</h3>
+        <p>One signature poster per creator's room. Hand-typed welcome card. Becomes a natural content moment when each creator films their arrival.</p>
+      </div>
+      <div class="concept-card">
+        <div class="concept-num">Merch 03 · Packaging</div>
+        <h3 class="h3">Custom box for the package</h3>
+        <p>Custom Abib × Bali product box housing the welcome set. Becomes the literal hero of the unboxing content. Possibly reusable as retail packaging for the future "Abib Bali Kit" set.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 08 · TIMELINE -->
+<section class="section alt" id="timeline">
+  <div class="container">
+    <div class="section-num">07 · The Timeline</div>
+    <h2 class="h2">Trip mid-July. <span class="accent">Content rolls out July → September.</span></h2>
+    <p class="lead" style="margin-top: 22px;">The trip is one moment. The content arc is two months. Posts staggered to ride Abib's summer push (sunsticks, Hyaluronic Boom, PDRN pre-order) and carry awareness into the August-September product launches.</p>
+
+    <div class="timeline-table">
+      <div class="timeline-row">
+        <div class="phase">Pre · June</div>
+        <div class="when">June 2026</div>
+        <div class="what">Creator confirmation (Creator #4). Package design + custom merch production. Bali villa booking + flight coordination. Product shipment to villa.</div>
+      </div>
+      <div class="timeline-row">
+        <div class="phase">Pre · Early July</div>
+        <div class="when">Early July</div>
+        <div class="what">Final brief development per creator. Content angles locked. Creators receive a pre-trip teaser brief (one Story / one feed post per creator, alluding to "something coming").</div>
+      </div>
+      <div class="timeline-row highlight">
+        <div class="phase">★ Trip · Mid-July</div>
+        <div class="when">3 Nights / 4 Days</div>
+        <div class="what">Bali production window. All filming captured. Live Stories from each creator throughout the trip. Group "moment" content shot mid-trip during peak golden-hour days.</div>
+      </div>
+      <div class="timeline-row">
+        <div class="phase">Post · Late July</div>
+        <div class="when">Wk 1–2 post-trip</div>
+        <div class="what">Solo short-form edits delivered. First two creators publish solo pieces. Sunstick / lip mask focus aligns with peak summer.</div>
+      </div>
+      <div class="timeline-row">
+        <div class="phase">Post · August</div>
+        <div class="when">Wk 3–5 post-trip</div>
+        <div class="what">Remaining solo pieces + collab piece publish. Coincides with Abib's August summer-end / back-to-routine wave. "Abib × Bali Kit" launches on site as the retail extension of the package concept.</div>
+      </div>
+      <div class="timeline-row">
+        <div class="phase">Post · September</div>
+        <div class="when">Wk 6+ post-trip</div>
+        <div class="what">Long-form trip film publishes — the anchor case study. Carries momentum into Abib's fall product launches (PDRN cream full launch, anti-aging lines).</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 09 · BUDGET -->
+<section class="section" id="budget">
+  <div class="container">
+    <div class="section-num">08 · The Investment</div>
+    <h2 class="h2">All-in figure. <span class="accent">One number.</span></h2>
+    <p class="lead" style="margin-top: 22px;">A single total for the full campaign — production, creators, agency. Internal line items below for clarity. This is a starting figure; final scope confirmed in Discovery call.</p>
+
+    <div class="budget-block">
+      <div class="budget-top">
+        <div>
+          <div class="total">~$125K</div>
+          <div class="total-label">All-In · USD · Starting Figure</div>
+        </div>
+        <p>Production + four creators + agency. Includes Bali villa, flights for 7 (4 creators + 3 SO managers), food/beverage, custom merch, ground transport, all creator fees for 6 finished pieces, agency strategy + production management.</p>
+      </div>
+      <div class="budget-rows">
+        <div class="budget-row">
+          <div>
+            <div class="item-name">Flights · 7 people</div>
+            <div class="item-note">US / Korea → Bali round trip</div>
+          </div>
+          <div class="item-amount">$8K–$10K</div>
+        </div>
+        <div class="budget-row">
+          <div>
+            <div class="item-name">Villa · 5–6 BR · 3 nights</div>
+            <div class="item-note">Single property hosting full group</div>
+          </div>
+          <div class="item-amount">$2K–$3K</div>
+        </div>
+        <div class="budget-row">
+          <div>
+            <div class="item-name">F&B · Trip duration</div>
+            <div class="item-note">Daily meals + group dinners + on-set catering</div>
+          </div>
+          <div class="item-amount">$3.5K</div>
+        </div>
+        <div class="budget-row">
+          <div>
+            <div class="item-name">Custom Abib × Bali merch + packaging</div>
+            <div class="item-note">T-shirts, hats, posters, custom box, welcome cards</div>
+          </div>
+          <div class="item-amount">$1K–$2.5K</div>
+        </div>
+        <div class="budget-row">
+          <div>
+            <div class="item-name">Transportation · Local Bali</div>
+            <div class="item-note">Rental car + driver / Uber</div>
+          </div>
+          <div class="item-amount">$500–$800</div>
+        </div>
+        <div class="budget-row">
+          <div>
+            <div class="item-name">Creator content fees · 4 creators</div>
+            <div class="item-note">Bundle rate (1 solo + 1 collab share + 1 long-form share per creator)</div>
+          </div>
+          <div class="item-amount">$80K–$90K</div>
+        </div>
+        <div class="budget-row">
+          <div>
+            <div class="item-name">Agency · Sensitive Ones</div>
+            <div class="item-note">Strategy, creator sourcing + management, on-site production, content delivery, campaign reporting</div>
+          </div>
+          <div class="item-amount">$20K–$25K</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 10 · WHY NOW -->
+<section class="section alt" id="why">
+  <div class="container">
+    <div class="section-num">09 · Why Now</div>
+    <h2 class="h2">Three reasons <span class="accent">this campaign lands in July specifically.</span></h2>
+
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-tag">Reason 01</div>
+        <h3>Sunstick season is right now.</h3>
+        <p>Abib's Airy + Quick sunsticks are peak-summer product. Bali is the literal use case. A US K-beauty consumer watching a creator apply Abib sunstick at a Bali beach is buying intent, not just brand awareness.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-tag">Reason 02</div>
+        <h3>PDRN cream is mid-launch.</h3>
+        <p>The PDRN Volume fill-it Booster crème is on 4th pre-order — "10K sold in first month." A campaign that introduces this product to US audiences via creator content right now extends that pre-order momentum into full launch.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-tag">Reason 03</div>
+        <h3>Content rolls into Q3 windows.</h3>
+        <p>Trip mid-July → posts late July through September. Aligns with Abib's "Prep Your Summer Skin" wave, the just-launched Hyaluronic Boom line, and the natural transition into back-to-routine fall product launches.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 11 · NEXT STEPS -->
+<section class="section" id="next">
+  <div class="container">
+    <div class="section-num">10 · Next Steps</div>
+    <h2 class="h2">From here <span class="accent">to a confirmed campaign.</span></h2>
+
+    <div class="next-steps">
+      <ol>
+        <li><span class="text"><strong>Concept feedback from Abib.</strong> Confirm the FIRST LIGHT direction, the product mix, and the trip structure. Adjust anywhere the brand sees a sharper angle.</span></li>
+        <li><span class="text"><strong>Budget alignment.</strong> Confirm the all-in figure works or scope to a different total. Single number, not line-item negotiation.</span></li>
+        <li><span class="text"><strong>Creator #4 sourcing + locking.</strong> Sensitive Ones sources and proposes 2–3 female creator candidates for the fourth slot, with media kits and recent work for Abib to choose from.</span></li>
+        <li><span class="text"><strong>Discovery call.</strong> 30 min with Abib team to lock product mix, packaging direction, custom merch design language, content content angles per creator.</span></li>
+        <li><span class="text"><strong>Agreement + start of production.</strong> Villa booking, creator contracts, merch into production, brief development. Within 5 business days of the discovery call.</span></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="signoff-block">
+      <div class="brand">
+        <span class="dot"></span>
+        <span class="name">Sensitive Ones Agency</span>
+      </div>
+      <div class="signoff">
+        <div class="who">FIRST LIGHT</div>
+        <div class="role">Abib × Bali · July 2026 · Concept v1</div>
+      </div>
+    </div>
+    <div class="contact-block">
+      <div class="group">
+        <div class="label">Email</div>
+        <a href="mailto:justin@sensitiveones.co">justin@sensitiveones.co</a>
+        <a href="mailto:alex@sensitiveones.co">alex@sensitiveones.co</a>
+        <a href="mailto:hello@sensitiveones.co">hello@sensitiveones.co</a>
+      </div>
+      <div class="group">
+        <div class="label">Web · Social</div>
+        <a href="https://www.sensitiveones.co" target="_blank">www.sensitiveones.co</a>
+        <a href="https://www.instagram.com/sensitiveones.agency" target="_blank">@sensitiveones.agency</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom-wrap">
+    <div class="footer-bottom">FIRST LIGHT · Abib × Sensitive Ones · Bali, July 2026 · Confidential · v1</div>
+  </div>
+</footer>
+
+</body>
+</html>
