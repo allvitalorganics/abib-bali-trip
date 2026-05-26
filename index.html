@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FIRST LIGHT · Abib × Sensitive Ones · Bali, July 2026</title>
-<meta name="description" content="A 4-creator destination content campaign in Bali for Abib. Sensitive Ones Agency, mid-July 2026.">
+<title>Abib Bali Skin Reset · Sensitive Ones Agency · July 2026</title>
+<meta name="description" content="A 4-creator destination skincare campaign for Abib. Abib before the sun. Abib after the sun. Sensitive Ones Agency, mid-July 2026.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='12' fill='%23127139'/%3E%3C/svg%3E">
 <style>
 :root {
@@ -124,7 +124,14 @@ body {
   color: var(--honey); margin-bottom: 18px;
   position: relative; z-index: 2;
 }
-.hero h1 { position: relative; z-index: 2; max-width: 1020px; margin-bottom: 18px; }
+.hero h1 { position: relative; z-index: 2; max-width: 1020px; margin-bottom: 22px; }
+.hero .promise {
+  position: relative; z-index: 2;
+  font-size: clamp(20px, 1.6vw + 10px, 30px); font-weight: 600;
+  color: var(--text); line-height: 1.2; letter-spacing: -0.5px;
+  margin-bottom: 22px; max-width: 780px;
+}
+.hero .promise .accent { color: var(--accent); }
 .hero .lead { position: relative; z-index: 2; max-width: 760px; }
 .hero-stats {
   display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
@@ -174,6 +181,71 @@ body {
   font-size: 12px; color: var(--text-soft); font-weight: 500; font-style: italic;
 }
 
+/* PRODUCTS — hero pair + supporting strip */
+.hero-products-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: var(--gap-grid); margin-top: clamp(36px, 4vw, 52px);
+}
+.hero-product-card {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-left: 4px solid var(--honey);
+  background: linear-gradient(180deg, var(--honey-soft) 0%, var(--bg-card) 40%);
+  border-radius: 16px; padding: clamp(28px, 2.5vw + 12px, 36px);
+  display: flex; flex-direction: column; gap: 12px;
+}
+.hero-product-card .moment {
+  font-size: 11px; font-weight: 700; letter-spacing: 1.8px; text-transform: uppercase;
+  color: var(--honey);
+}
+.hero-product-card .product-name {
+  font-size: clamp(20px, 1.2vw + 10px, 26px); font-weight: 800;
+  letter-spacing: -0.4px; line-height: 1.2;
+}
+.hero-product-card .product-name-kr {
+  font-size: 14px; font-weight: 500; color: var(--text-mid); margin-top: 2px;
+}
+.hero-product-card .role-list { list-style: none; padding: 0; margin: 8px 0 0; }
+.hero-product-card .role-list li {
+  font-size: 13px; color: var(--text); line-height: 1.55;
+  padding: 4px 0 4px 18px; position: relative;
+}
+.hero-product-card .role-list li::before {
+  content: ""; position: absolute; left: 0; top: 12px;
+  width: 6px; height: 6px;
+  background: var(--accent); border-radius: 50%;
+}
+.hero-product-card .consumer-memory {
+  margin-top: 10px; padding-top: 12px;
+  border-top: 1px solid var(--border);
+  font-style: italic; font-size: 13.5px; color: var(--text-mid);
+}
+
+.supporting-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: var(--gap-grid); margin-top: clamp(28px, 3vw, 40px);
+}
+.supporting-card {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: 12px; padding: clamp(16px, 1.4vw + 6px, 20px);
+  display: flex; flex-direction: column; gap: 6px;
+}
+.supporting-card .product-cat {
+  font-size: 9px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
+  color: var(--accent);
+}
+.supporting-card .product-name {
+  font-size: 13px; font-weight: 700; line-height: 1.3;
+}
+.supporting-card .product-name-kr {
+  font-size: 11.5px; font-weight: 500; color: var(--text-mid);
+}
+
+.section-subheading {
+  font-size: 12px; font-weight: 700; letter-spacing: 1.8px; text-transform: uppercase;
+  color: var(--text); margin-top: clamp(40px, 4vw, 56px); margin-bottom: 12px;
+  padding-bottom: 12px; border-bottom: 1px solid var(--border);
+}
+
 /* CREATOR CARDS */
 .creator-grid {
   display: grid; grid-template-columns: repeat(4, 1fr);
@@ -216,41 +288,6 @@ body {
   border-top: 1px solid var(--border);
 }
 
-/* PRODUCT CARDS */
-.product-grid {
-  display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: var(--gap-grid); margin-top: clamp(36px, 4vw, 52px);
-}
-.product-card {
-  background: var(--bg-card); border: 1px solid var(--border);
-  border-radius: 12px; padding: clamp(18px, 1.6vw + 8px, 22px);
-  display: flex; flex-direction: column; gap: 8px;
-}
-.product-card.hero-product {
-  border-left: 4px solid var(--honey);
-  background: linear-gradient(180deg, var(--honey-soft) 0%, var(--bg-card) 50%);
-}
-.product-card .product-cat {
-  font-size: 9px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
-  color: var(--accent);
-}
-.product-card.hero-product .product-cat { color: var(--honey); }
-.product-card .product-name {
-  font-size: 14px; font-weight: 700; line-height: 1.3; letter-spacing: -0.2px;
-}
-.product-card .product-name-kr {
-  font-size: 12px; font-weight: 500; color: var(--text-mid);
-}
-.product-card .product-price {
-  font-size: 14px; font-weight: 700; color: var(--accent-deep);
-  font-variant-numeric: tabular-nums;
-  margin-top: 4px;
-  padding-top: 8px; border-top: 1px solid var(--border);
-}
-.product-card .product-note {
-  font-size: 11px; color: var(--text-mid); margin-top: 2px; font-style: italic;
-}
-
 /* DELIVERABLES */
 .deliverables-grid {
   display: grid; grid-template-columns: 1fr 1fr 1fr;
@@ -271,7 +308,48 @@ body {
 }
 .deliv-card p { font-size: 13px; color: var(--text-mid); line-height: 1.6; }
 
-/* PACKAGE / MERCH cards */
+/* VIRAL HOOK CALLOUT */
+.viral-callout {
+  margin-top: clamp(36px, 4vw, 52px);
+  background: var(--bg-dark); color: white;
+  border-radius: 18px; padding: clamp(32px, 3vw + 14px, 48px);
+  display: grid; grid-template-columns: 240px 1fr;
+  gap: clamp(28px, 3vw, 44px); align-items: center;
+  position: relative; overflow: hidden;
+}
+.viral-callout::after {
+  content: ""; position: absolute; top: -40px; right: -40px;
+  width: 240px; height: 240px;
+  background: radial-gradient(circle, rgba(217, 164, 65, 0.15) 0%, transparent 70%);
+  border-radius: 50%; pointer-events: none;
+}
+.viral-callout .viral-tag {
+  font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+  color: var(--honey); margin-bottom: 10px;
+}
+.viral-callout h3 {
+  font-size: clamp(28px, 2vw + 14px, 40px); font-weight: 800;
+  letter-spacing: -1px; line-height: 1.1;
+  color: white;
+  position: relative; z-index: 2;
+}
+.viral-callout .quote-block {
+  position: relative; z-index: 2;
+  font-size: clamp(15px, 0.5vw + 12px, 17px); line-height: 1.5;
+  color: rgba(255,255,255,0.85);
+}
+.viral-callout .quote-line {
+  display: block; font-weight: 600; color: white;
+  padding: 6px 0;
+}
+.viral-callout .quote-line.answer { color: var(--honey); }
+.viral-callout .note {
+  margin-top: 16px; padding-top: 16px;
+  border-top: 1px solid rgba(255,255,255,0.15);
+  font-size: 12px; color: rgba(255,255,255,0.55); line-height: 1.55;
+}
+
+/* KIT / VILLA SPLIT */
 .split-2 {
   display: grid; grid-template-columns: 1fr 1fr;
   gap: var(--gap-grid); margin-top: clamp(36px, 4vw, 52px);
@@ -328,41 +406,66 @@ body {
   font-size: 13px; color: var(--text-mid); line-height: 1.5;
 }
 
-/* BUDGET BLOCK */
-.budget-block {
+/* PRICING — 3 TIER GRID */
+.pricing-intro {
+  margin-top: clamp(28px, 3vw, 36px);
+  padding: clamp(20px, 2vw + 8px, 28px);
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px;
+  font-size: 13.5px; color: var(--text-mid); line-height: 1.65;
+}
+.pricing-intro strong { color: var(--text); }
+
+.pricing-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: var(--gap-grid); margin-top: clamp(36px, 4vw, 52px);
+  align-items: stretch;
+}
+.pricing-tier {
   background: var(--bg-card); border: 1px solid var(--border);
-  border-radius: 14px; overflow: hidden;
-  margin-top: clamp(36px, 4vw, 52px);
+  border-radius: 18px; padding: clamp(28px, 2.5vw + 12px, 36px);
+  display: flex; flex-direction: column; gap: 14px;
+  position: relative;
 }
-.budget-top {
-  padding: clamp(28px, 3vw + 12px, 40px);
-  display: grid; grid-template-columns: auto 1fr;
-  gap: clamp(28px, 3vw, 44px); align-items: center;
-  border-bottom: 1px solid var(--border);
+.pricing-tier.recommended {
+  border: 2px solid var(--honey);
+  background: linear-gradient(180deg, var(--honey-soft) 0%, var(--bg-card) 30%);
+  transform: translateY(-4px);
 }
-.budget-top .total {
-  font-size: clamp(48px, 5vw + 14px, 84px); font-weight: 800;
-  color: var(--accent-deep); letter-spacing: -2px; line-height: 1;
+.pricing-tier .tier-recommend {
+  position: absolute; top: -12px; right: 20px;
+  background: var(--honey); color: white;
+  padding: 5px 14px; font-size: 9px; font-weight: 800;
+  letter-spacing: 1.5px; text-transform: uppercase;
+  border-radius: 100px;
 }
-.budget-top .total-label {
-  font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
-  color: var(--text-soft); margin-top: 8px;
+.pricing-tier .tier-label {
+  font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
+  color: var(--accent);
 }
-.budget-top p { font-size: clamp(14px, 0.6vw + 11px, 16px); color: var(--text); line-height: 1.6; }
-.budget-rows { padding: clamp(20px, 2vw + 8px, 28px); }
-.budget-row {
-  display: grid; grid-template-columns: 1fr auto;
-  align-items: center; gap: 18px;
-  padding: 10px 0;
-  border-bottom: 1px solid var(--border);
+.pricing-tier.recommended .tier-label { color: var(--honey); }
+.pricing-tier .tier-amount {
+  font-size: clamp(40px, 3vw + 14px, 60px); font-weight: 800;
+  color: var(--accent-deep); letter-spacing: -1.5px; line-height: 1;
 }
-.budget-row:last-child { border-bottom: none; }
-.budget-row .item-name { font-size: 14px; font-weight: 600; color: var(--text); }
-.budget-row .item-note { font-size: 12px; color: var(--text-soft); margin-top: 2px; }
-.budget-row .item-amount {
-  font-size: 16px; font-weight: 700; color: var(--accent-deep);
-  font-variant-numeric: tabular-nums; white-space: nowrap;
+.pricing-tier .tier-description {
+  font-size: 12px; font-weight: 700; color: var(--text-soft);
+  letter-spacing: 1.2px; text-transform: uppercase;
 }
+.pricing-tier .tier-headline {
+  font-size: 14px; font-weight: 700; color: var(--text); line-height: 1.4;
+  padding-bottom: 12px; border-bottom: 1px solid var(--border);
+}
+.pricing-tier ul { list-style: none; padding: 0; margin: 0; flex: 1; }
+.pricing-tier ul li {
+  font-size: 12.5px; color: var(--text); line-height: 1.55;
+  padding: 5px 0 5px 18px; position: relative;
+}
+.pricing-tier ul li::before {
+  content: ""; position: absolute; left: 0; top: 12px;
+  width: 6px; height: 6px;
+  background: var(--accent); border-radius: 50%;
+}
+.pricing-tier.recommended ul li::before { background: var(--honey); }
 
 /* WHY NOW grid */
 .why-grid {
@@ -421,6 +524,10 @@ body {
 .footer .signoff .who {
   font-size: clamp(24px, 1.5vw + 14px, 32px); font-weight: 800; letter-spacing: -0.5px;
 }
+.footer .signoff .visual-tag {
+  font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+  color: var(--honey); margin-top: 6px;
+}
 .footer .signoff .role { font-size: 13px; color: rgba(255,255,255,0.55); margin-top: 4px; }
 .footer .brand .name { color: white; }
 .footer .contact-block { display: flex; flex-direction: column; gap: 14px; font-size: 13px; color: rgba(255,255,255,0.7); line-height: 1.6; }
@@ -441,16 +548,21 @@ body {
 
 /* RESPONSIVE */
 @media (max-width: 880px) { .nav-links { display: none; } }
+@media (max-width: 760px) {
+  .pricing-tier.recommended { transform: none; }
+}
 @media (max-width: 720px) {
   .concept-grid { grid-template-columns: 1fr; }
   .creator-grid { grid-template-columns: 1fr 1fr; }
   .deliverables-grid { grid-template-columns: 1fr; }
   .split-2 { grid-template-columns: 1fr; }
   .why-grid { grid-template-columns: 1fr; }
+  .hero-products-grid { grid-template-columns: 1fr; }
+  .pricing-grid { grid-template-columns: 1fr; }
+  .viral-callout { grid-template-columns: 1fr; gap: 16px; }
   .timeline-row {
     grid-template-columns: 1fr; gap: 4px; padding: 14px 18px;
   }
-  .budget-top { grid-template-columns: 1fr; gap: 20px; }
   .footer .container { grid-template-columns: 1fr; gap: 24px; }
   .container, .nav-inner, .footer-bottom-wrap { padding-left: 18px; padding-right: 18px; }
 }
@@ -477,23 +589,24 @@ body {
     <span class="cobrand-pill">× Abib · Bali</span>
     <div class="nav-links">
       <a href="#concept">Concept</a>
-      <a href="#creators">Creators</a>
       <a href="#products">Products</a>
+      <a href="#creators">Creators</a>
       <a href="#deliverables">Output</a>
-      <a href="#package">Package</a>
+      <a href="#package">Kit</a>
       <a href="#timeline">Timeline</a>
-      <a href="#budget">Budget</a>
+      <a href="#budget">Investment</a>
     </div>
-    <div class="nav-status">Concept v1</div>
+    <div class="nav-status">Concept v2</div>
   </div>
 </nav>
 
-<!-- 01 · COVER -->
+<!-- 00 · HERO -->
 <section class="hero" id="top">
   <div class="container">
     <div class="hero-eyebrow">Concept Proposal · Confidential · May 2026</div>
-    <h1 class="h1">FIRST <span class="accent">LIGHT.</span><br>Abib × Bali, July 2026.</h1>
-    <p class="lead">A four-creator destination content campaign in Bali for Abib. Sensitive Ones Agency producing. Four creators, three nights, six pieces of finished content. Built around Abib's brand essence — <em>"the first month"</em> — translated into a Bali sunrise visual language.</p>
+    <h1 class="h1">Abib Bali <span class="accent">Skin Reset.</span></h1>
+    <div class="promise">Abib before the sun. <span class="accent">Abib after the sun.</span></div>
+    <p class="lead">A creator-led summer travel skincare campaign. Four creators. Four nights. One Bali villa. Two hero products. One clear consumer memory: Abib is the skincare you bring on summer trips.</p>
 
     <div class="hero-stats">
       <div class="item">
@@ -502,46 +615,46 @@ body {
         <div class="sub">2 male · 2 female</div>
       </div>
       <div class="item">
-        <div class="num">3N / 4D</div>
+        <div class="num">4N</div>
         <div class="label">Trip Length</div>
         <div class="sub">Mid-July 2026</div>
       </div>
       <div class="item">
-        <div class="num">6</div>
-        <div class="label">Finished Pieces</div>
-        <div class="sub">4 solo + 1 collab + 1 long-form</div>
+        <div class="num">2</div>
+        <div class="label">Hero Products</div>
+        <div class="sub">Sunstick · PDRN Cream</div>
       </div>
       <div class="item">
-        <div class="num">5</div>
-        <div class="label">Abib Hero Lines</div>
-        <div class="sub">PDRN · Sunsticks · Lip Mask · Eye Patches · Pack-to-Foam</div>
+        <div class="num">6+</div>
+        <div class="label">Finished Assets</div>
+        <div class="sub">4 solo · 2 group · 1 long-form</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 02 · THE CONCEPT -->
+<!-- 01 · THE CONCEPT -->
 <section class="section alt" id="concept">
   <div class="container">
     <div class="section-num">01 · The Concept</div>
-    <h2 class="h2"><span class="accent">FIRST LIGHT.</span><br>Abib's first moon, met by Bali's first sun.</h2>
-    <p class="lead" style="margin-top: 22px;">Abib means <em>"the first month"</em>. The brand essence is a return to the natural skin cycle, a quiet reset, a minimalism that earns its calm. Bali in July is the dry season — long mornings, low light, slow days. We took those two ideas and built the campaign on the literal overlap: the moment of first light each day.</p>
+    <h2 class="h2">Abib = the skincare you bring on <span class="accent">summer trips.</span></h2>
+    <p class="lead" style="margin-top: 22px;">Summer travel creates real skin problems. Sun. Heat. Sweat. Pool days. Beach days. Flights. Dry hotel air. Long outdoor hours. This is exactly where Abib can own a stronger consumer memory — not just "clean K-beauty," not just "minimal skincare," but the summer travel skincare routine.</p>
 
     <div class="concept-grid">
       <div class="concept-card">
-        <div class="concept-num">Pillar 01 · Visual Language</div>
-        <h3 class="h3">Golden hour as the brand canvas.</h3>
-        <p>Every piece of content shot in Bali's morning and golden-hour windows. Soft natural light. Skin-first composition. No artificial glow, no studio gloss. Lets Abib's minimalist DNA carry the aesthetic.</p>
+        <div class="concept-num">Pillar 01 · Behavior</div>
+        <h3 class="h3">Two products. One routine.</h3>
+        <p>Before going out: Abib Sunstick. After the sun: Abib PDRN Cream. The campaign is built around one simple, repeatable behavior — the kind of memory consumers can hold without trying.</p>
       </div>
       <div class="concept-card">
-        <div class="concept-num">Pillar 02 · Product Integration</div>
-        <h3 class="h3">Morning ritual as the through-line.</h3>
-        <p>The Abib hero lineup naturally maps onto a Bali sunrise routine. Wake up · cleanse with pack-to-foam · eye patch as the coffee · sunstick as the threshold step before the day · lip mask before the pool. Product in context, not on a backdrop.</p>
+        <div class="concept-num">Pillar 02 · Context</div>
+        <h3 class="h3">Bali makes the use case true.</h3>
+        <p>People already associate Bali with sun, heat, pool villas, beach days, glowing skin, reset. The setting creates the need — the product is used because the trip demands it. This is the difference between product placement and product context.</p>
       </div>
       <div class="concept-card">
         <div class="concept-num">Pillar 03 · Restraint</div>
         <h3 class="h3">Less, in Bali.</h3>
-        <p>No spectacle. No staged influencer-trip chaos. Four creators, three nights, real downtime, real shots. Abib's "less is more" principle applied to the campaign itself — fewer creators, fewer posts, more density per piece.</p>
+        <p>Not a loud party trip. Not a Tarte-style spectacle. Four creators, four nights, real downtime, real shots. Abib's "less is more" principle applied to the campaign itself — quiet, beautiful, intentional, product-led.</p>
       </div>
     </div>
 
@@ -552,12 +665,106 @@ body {
   </div>
 </section>
 
-<!-- 03 · THE CREATORS -->
+<!-- 02 · POSITIONING / PRODUCTS -->
+<section class="section" id="products">
+  <div class="container">
+    <div class="section-num">02 · Positioning</div>
+    <h2 class="h2">One trip. Two products. <span class="accent">One clear memory.</span></h2>
+    <p class="lead" style="margin-top: 22px;">Instead of spreading the campaign across too many products, the story focuses on two hero moments. The supporting products still appear in the kit, the villa, and the BTS — but they don't compete for the consumer's memory.</p>
+
+    <div class="hero-products-grid">
+      <div class="hero-product-card">
+        <div class="moment">★ Hero 01 · The Daytime Essential</div>
+        <div class="product-name">Abib Sunstick</div>
+        <div class="product-name-kr">선스틱 · Airy + Quick</div>
+        <ul class="role-list">
+          <li>Before leaving the villa</li>
+          <li>Before pool or beach</li>
+          <li>Before walking outside</li>
+          <li>Reapplication during the day</li>
+          <li>Easy travel bag skincare</li>
+        </ul>
+        <div class="consumer-memory">"I need this when I travel somewhere sunny."</div>
+      </div>
+      <div class="hero-product-card">
+        <div class="moment">★ Hero 02 · The After-Sun Reset</div>
+        <div class="product-name">Abib PDRN Cream</div>
+        <div class="product-name-kr">PDRN 보르피린 크림</div>
+        <ul class="role-list">
+          <li>Nighttime skincare</li>
+          <li>After beach / pool</li>
+          <li>After sun exposure</li>
+          <li>After heat and travel fatigue</li>
+          <li>Reset before the next day</li>
+        </ul>
+        <div class="consumer-memory">"I need this after my skin goes through a long summer day."</div>
+      </div>
+    </div>
+
+    <div class="section-subheading">Supporting products · in the kit, in the villa, in the BTS</div>
+    <div class="supporting-grid">
+      <div class="supporting-card">
+        <div class="product-cat">Lip</div>
+        <div class="product-name">PDRN Lip Mask</div>
+        <div class="product-name-kr">PDRN 립마스크</div>
+      </div>
+      <div class="supporting-card">
+        <div class="product-cat">Eye</div>
+        <div class="product-name">PDRN Eye Patch</div>
+        <div class="product-name-kr">PDRN 아이패치</div>
+      </div>
+      <div class="supporting-card">
+        <div class="product-cat">Eye</div>
+        <div class="product-name">Jericho Rose Eye Patch</div>
+        <div class="product-name-kr">부활초 아이패치</div>
+      </div>
+      <div class="supporting-card">
+        <div class="product-cat">Cleanse</div>
+        <div class="product-name">Pack-to-Foam</div>
+        <div class="product-name-kr">팩투폼</div>
+      </div>
+      <div class="supporting-card">
+        <div class="product-cat">Mask</div>
+        <div class="product-name">Travel Sheet Mask</div>
+        <div class="product-name-kr">트래블 마스크</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 · VISUAL LANGUAGE -->
+<section class="section alt" id="visual">
+  <div class="container">
+    <div class="section-num">03 · Visual Language</div>
+    <h2 class="h2"><span class="accent">FIRST LIGHT</span> is how the campaign looks.</h2>
+    <p class="lead" style="margin-top: 22px;">Abib means "the first month" — a return to the skin's natural rhythm. Bali gives that idea a physical world: morning light, warm air, water, skin, rest, reset.</p>
+
+    <div class="concept-grid">
+      <div class="concept-card">
+        <div class="concept-num">Visual · Light</div>
+        <h3 class="h3">Naturally lit. Always.</h3>
+        <p>Every piece of content shot in Bali's morning and golden-hour windows. Soft natural light, skin-first composition. No artificial glow, no studio gloss.</p>
+      </div>
+      <div class="concept-card">
+        <div class="concept-num">Visual · Tone</div>
+        <h3 class="h3">Calm, minimal, warm.</h3>
+        <p>Skin-first. Not overly staged. Not chaotic influencer-trip energy. Abib's version of a brand trip is a quiet one — the content has to feel that way.</p>
+      </div>
+      <div class="concept-card">
+        <div class="concept-num">Commercial</div>
+        <h3 class="h3">FIRST LIGHT is the look. Skin Reset is the sell.</h3>
+        <p>The visual language carries Abib's brand DNA. The commercial position — "Abib is the skincare you bring on summer trips" — is what the campaign actually sells.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 04 · THE CREATORS -->
 <section class="section" id="creators">
   <div class="container">
-    <div class="section-num">02 · The Creators</div>
-    <h2 class="h2">Four creators. <span class="accent">Two male, two female.</span></h2>
-    <p class="lead" style="margin-top: 22px;">A small group is the entire point. Each creator gets enough air to make their own content, but the group is small enough to create a real "moment" — the kind that pulls audiences in because they recognize people they already follow showing up at the same place.</p>
+    <div class="section-num">04 · The Creators</div>
+    <h2 class="h2">Four creators. <span class="accent">Three confirmed, one open.</span></h2>
+    <p class="lead" style="margin-top: 22px;">Small enough to feel real. Strong enough to travel across audiences. A smaller group gives each creator space to make content that feels personal — while still creating the social proof of multiple creators sharing one Abib experience.</p>
 
     <div class="creator-grid">
       <div class="creator-card">
@@ -566,7 +773,7 @@ body {
         <div class="handle">@daesungseo98</div>
         <div class="reach">2.6M</div>
         <div class="reach-sub">Combined reach · NY-based</div>
-        <p>Co-founder of Sensitive Ones. Korean-American voice. Trust-led skincare content. Bridges Korea and US audience naturally.</p>
+        <p>Co-founder of Sensitive Ones. Korean-American voice. Trust-led skincare content. A natural bridge between Korean beauty culture and US audiences.</p>
       </div>
       <div class="creator-card">
         <div class="gender-tag">Male · Confirmed</div>
@@ -574,7 +781,7 @@ body {
         <div class="handle">@hwaniie__</div>
         <div class="reach">4.2M</div>
         <div class="reach-sub">Combined reach · NY-based</div>
-        <p>Romantic lifestyle aesthetic. Beauty-native content. Frequent Daesung collaborator — the duo crosspost is one of the strongest viral levers on the roster.</p>
+        <p>Beauty-native lifestyle creator with a romantic visual language. His frequent collaboration with Daesung gives the campaign a built-in duo dynamic for the group viral Reel.</p>
       </div>
       <div class="creator-card">
         <div class="gender-tag">Female · Confirmed</div>
@@ -582,328 +789,286 @@ body {
         <div class="handle">@jumybear</div>
         <div class="reach">1.5M+</div>
         <div class="reach-sub">Combined reach</div>
-        <p>Beauty + lifestyle. Warm, naturally-lit content style aligns directly with the First Light visual concept. Largest single solo reach in this lineup.</p>
+        <p>Beauty and lifestyle creator with warm, naturally-lit content that aligns strongly with the Skin Reset visual direction.</p>
       </div>
       <div class="creator-card tbd">
         <div class="gender-tag">Female · TBD</div>
         <div class="name">Creator #4</div>
         <div class="handle">handpicked for fit</div>
         <div class="reach">TBD</div>
-        <div class="reach-sub">Sourced to brief</div>
-        <p>Sourcing in progress. Targeting a US-based female creator with a calm/minimal aesthetic to balance Jumy's energy and round out the visual range. Confirmed in Discovery call.</p>
+        <div class="reach-sub">2–3 options proposed</div>
+        <p>US-based female beauty/lifestyle creator with a calm, minimal aesthetic. Sensitive Ones proposes 2–3 options for Abib to choose from.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 04 · HERO PRODUCTS -->
-<section class="section alt" id="products">
+<!-- 05 · CONTENT STRUCTURE -->
+<section class="section alt" id="deliverables">
   <div class="container">
-    <div class="section-num">03 · The Products</div>
-    <h2 class="h2">Five Abib lines, one Bali context.</h2>
-    <p class="lead" style="margin-top: 22px;">The products Abib wants pushed already fit a Bali morning ritual on their own. We don't have to invent integration — we just need to film what's already true. Hero focus on the PDRN line (currently mid-launch) and the sunsticks (peak summer relevance).</p>
-
-    <div class="product-grid">
-      <div class="product-card hero-product">
-        <div class="product-cat">★ Hot Launch</div>
-        <div class="product-name">PDRN Volume fill-it Booster crème 2.5 Tube</div>
-        <div class="product-name-kr">PDRN 보르피린 크림</div>
-        <div class="product-price">$28 · $21 sale</div>
-        <div class="product-note">"10K sold worldwide in first month — ~1 unit every 6 minutes." 4th pre-order open.</div>
-      </div>
-      <div class="product-card hero-product">
-        <div class="product-cat">★ Summer Hero</div>
-        <div class="product-name">Airy Sunstick Smoothing Bar</div>
-        <div class="product-name-kr">선스틱 에어리</div>
-        <div class="product-price">$28 · $21 sale</div>
-        <div class="product-note">SPF 50+. Daily threshold step before pool or beach.</div>
-      </div>
-      <div class="product-card hero-product">
-        <div class="product-cat">★ Summer Hero</div>
-        <div class="product-name">Quick Sunstick Protection Bar</div>
-        <div class="product-name-kr">선스틱 퀵</div>
-        <div class="product-price">$28 · $21 sale</div>
-        <div class="product-note">SPF 50+. Reapplication-friendly format.</div>
-      </div>
-      <div class="product-card">
-        <div class="product-cat">Eye · 부활초</div>
-        <div class="product-name">Vegan Collagen Eye Patch Jericho Rose Jelly</div>
-        <div class="product-name-kr">아이패치 부활초</div>
-        <div class="product-price">$23</div>
-      </div>
-      <div class="product-card">
-        <div class="product-cat">Eye · PDRN</div>
-        <div class="product-name">PDRN Retinal Eye Patch Glow Jelly</div>
-        <div class="product-name-kr">아이패치 PDRN</div>
-        <div class="product-price">$23</div>
-      </div>
-      <div class="product-card">
-        <div class="product-cat">Eye · Glutathione</div>
-        <div class="product-name">Glutathione Dark Spot Wrapping Mask</div>
-        <div class="product-name-kr">아이패치 글루타치온</div>
-        <div class="product-price">$28</div>
-      </div>
-      <div class="product-card">
-        <div class="product-cat">Lip Care</div>
-        <div class="product-name">PDRN Vegan Collagen Lip Mask Glazed Jelly</div>
-        <div class="product-name-kr">PDRN 립마스크</div>
-        <div class="product-price">$20</div>
-      </div>
-      <div class="product-card">
-        <div class="product-cat">Cleanser</div>
-        <div class="product-name">Pack-to-Foam Cleanser</div>
-        <div class="product-name-kr">팩투폼</div>
-        <div class="product-price">Abib core line</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 05 · DELIVERABLES -->
-<section class="section" id="deliverables">
-  <div class="container">
-    <div class="section-num">04 · The Output</div>
-    <h2 class="h2">Six finished pieces of content. <span class="accent">Made deliberately.</span></h2>
-    <p class="lead" style="margin-top: 22px;">A small, considered output. No overproduction. Each creator gets one solo short-form to own a hero product. One collab short-form binds the group. One long-form recap carries the trip narrative from start to finish.</p>
+    <div class="section-num">05 · Content Structure</div>
+    <h2 class="h2">Six core campaign assets. <span class="accent">Built for one memory.</span></h2>
+    <p class="lead" style="margin-top: 22px;">Not just six videos. Six assets built to create one product memory: Abib is the skincare you bring on summer trips. Each creator works around the same two-product routine — day Sunstick, night PDRN Cream — but each gets a different angle.</p>
 
     <div class="deliverables-grid">
       <div class="deliv-card">
         <div class="deliv-num">4</div>
         <h3>Solo Short-Form</h3>
-        <p>One short-form video per creator (TikTok + Instagram Reels cross-post). Each one anchored on a different Abib hero product. Creator chooses their own angle within the FIRST LIGHT visual framework — morning ritual, beach moment, sunset wind-down, room reset.</p>
+        <p>One short-form per creator (TikTok + Reels cross-post). All four anchored on the same two-product routine, different angles: Daesung "what I actually pack for a summer trip," Kai "Bali pool day skincare," Jumy "summer skin reset in Bali," Creator #4 "what's in my Bali skincare bag." Platform-native, not overly scripted.</p>
       </div>
       <div class="deliv-card">
-        <div class="deliv-num">1</div>
-        <h3>Collab Short-Form</h3>
-        <p>One short-form video with all four creators together. Group "moment" content — the Abib package reveal, a sunrise scene, an evening together, or the merch drop unboxing. The piece that signals to followers that a real campaign is happening.</p>
+        <div class="deliv-num">2</div>
+        <h3>Group Viral Reels</h3>
+        <p>The campaign's main viral lever. Reference format: "Does he send you to Bali?" / "No. Abib does." Two pieces capture different group moments — one anchored on the "who sent you" hook, one on the villa / kit reveal.</p>
       </div>
       <div class="deliv-card">
         <div class="deliv-num">1</div>
         <h3>Long-Form Trip Film</h3>
-        <p>One long-form recap of the entire trip. YouTube + Reels long edit. Trip narrative arc, behind the scenes, all four creators together, Abib hosting visible in the experience. The piece that becomes the anchor case study and gets reused across Abib's owned channels.</p>
+        <p>Not a vlog. Abib's campaign film. Working title: <em>"Abib Sent Us to Bali for a Skin Reset."</em> Reusable owned-channel asset · BTS · creator chemistry · the full Bali Skin Reset story. Cut down into shorter edits for Reels, TikTok, paid ads, and brand decks.</p>
       </div>
     </div>
 
-    <div class="statement">
-      Tarte's #trippinwithtarte trips generate <strong>100M+ impressions per trip</strong>. Our scale is intentionally smaller — four creators, six finished pieces — targeting <strong>10M–30M combined impressions</strong> across the campaign window at a fraction of the production cost.
-      <span class="cite">— Tarte benchmark cited by @nataliebarbu (Dec 2025) · 100M+ impressions per trip</span>
+    <!-- VIRAL HOOK CALLOUT -->
+    <div class="viral-callout">
+      <div>
+        <div class="viral-tag">Viral Hook</div>
+        <h3>"Abib Does."</h3>
+      </div>
+      <div class="quote-block">
+        <span class="quote-line">"Who sent you to Bali?"</span>
+        <span class="quote-line answer">"Abib did."</span>
+        <div class="note">The goal isn't to feature Abib in a trip. The goal is to make Abib the reason the trip exists. The hook makes that reframe in one cut: villa, kit, Sunstick, pool, group moments. One reference format, calibrated to land on US K-beauty audiences.</div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- 06 · PERSONALIZED PACKAGE -->
-<section class="section alt" id="package">
+<!-- 06 · SKIN RESET KIT -->
+<section class="section" id="package">
   <div class="container">
-    <div class="section-num">05 · The Package</div>
-    <h2 class="h2">A personal Abib package. <span class="accent">Waiting in the room.</span></h2>
-    <p class="lead" style="margin-top: 22px;">Each creator walks into their room and finds a personalized Abib package — designed for them, tied to the trip. The "First Light" set: curated products in custom packaging, a personal note, a piece of branded merch. The room is lightly styled to match. Captures itself.</p>
+    <div class="section-num">06 · Commerce Extension</div>
+    <h2 class="h2">Abib Bali <span class="accent">Skin Reset Kit.</span></h2>
+    <p class="lead" style="margin-top: 22px;">The campaign should not end at impressions. The exact routine used during the trip becomes a shoppable product bundle — Abib turns a content moment into a retail moment.</p>
 
     <div class="split-2">
       <div class="split-card">
-        <div class="split-eyebrow">The Welcome Package</div>
-        <h3>"First Light Set"</h3>
-        <p>Curated for each creator. Same core, personalized accents. The unboxing IS the first content moment of the trip — built to be filmed naturally on arrival.</p>
+        <div class="split-eyebrow">What's in the kit</div>
+        <h3>The exact Bali routine, in a box.</h3>
+        <p>The two hero products, the supporting travel items, and the campaign touch — the same kit the creators used on the trip, productized for the consumer.</p>
         <ul>
-          <li>Both sunsticks (Airy + Quick) — pre-trip skin priming</li>
-          <li>PDRN Volume fill-it Booster crème — the "after sun" reset</li>
-          <li>PDRN lip mask + an eye patch of their choosing</li>
-          <li>Pack-to-foam cleanser — travel-format ritual</li>
-          <li>Custom merch piece (T-shirt or hat from the campaign drop)</li>
-          <li>Hand-written note from the Abib team</li>
+          <li><strong>Core:</strong> Abib Sunstick + Abib PDRN Cream</li>
+          <li><strong>Supporting:</strong> lip mask · eye patch · cleanser · mask pack or mini</li>
+          <li><strong>Campaign touch:</strong> Abib × Bali pouch or box · creator note · limited campaign card</li>
         </ul>
       </div>
       <div class="split-card">
-        <div class="split-eyebrow">The Future Product Hook</div>
-        <h3>"Abib Bali" set, ready for retail.</h3>
-        <p>The package concept doesn't end with the trip. The exact "First Light Set" — minus the personalization — becomes a real Abib product offering on the site afterward. Could be sold as a flat set ("Abib Bali Kit"), or as creator-curated edits ("Abib × Jumy Bali Edit"), or both.</p>
+        <div class="split-eyebrow">Why it matters</div>
+        <h3>Content expense → retail moment.</h3>
+        <p>The consumer doesn't just watch the creators in Bali. They can buy the exact routine. The kit converts the campaign's content memory into measurable commerce — and gives Abib a clean post-trip launch the campaign content directly markets.</p>
         <ul>
-          <li>Drop alongside trip content (late July / early August)</li>
-          <li>Limited edition framing — ties future-product to creator credibility</li>
-          <li>Pre-built bundle for Olive Young and US Amazon — no additional photography needed beyond the trip output</li>
-          <li>Creator-edition versions extend campaign life across Q3</li>
+          <li>Sells alongside the long-form trip film drop</li>
+          <li>Limited campaign card carries the scarcity message</li>
+          <li>CTA: "Shop the routine Daesung, Kai, Jumy, and the SO crew used in Bali"</li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 07 · MERCH -->
-<section class="section" id="merch">
+<!-- 07 · VILLA & MERCH -->
+<section class="section alt" id="villa">
   <div class="container">
-    <div class="section-num">06 · The Merch</div>
-    <h2 class="h2">Custom "Abib × Bali" merch. <span class="accent">Worn naturally on the trip.</span></h2>
-    <p class="lead" style="margin-top: 22px;">A small, focused custom merch drop designed specifically for this campaign. Worn by the four creators throughout the trip — so the campaign mark shows up organically in every piece of content, no overlay needed.</p>
+    <div class="section-num">07 · Villa & Merch</div>
+    <h2 class="h2">The villa is <span class="accent">the campaign set.</span></h2>
+    <p class="lead" style="margin-top: 22px;">Not just a place to sleep. The villa functions as Abib's owned environment for four nights — naturally present in every piece of content, never over-branded.</p>
 
-    <div class="concept-grid">
-      <div class="concept-card">
-        <div class="concept-num">Merch 01 · Wearable</div>
-        <h3 class="h3">T-shirts + hats</h3>
-        <p>Co-branded Abib × Bali tee + cap. Subtle. Cream tone, simple type, designed to match the visual aesthetic — not loud branded merch.</p>
+    <div class="split-2">
+      <div class="split-card">
+        <div class="split-eyebrow">Villa · Set design</div>
+        <h3>Abib-owned environment.</h3>
+        <p>Sensitive Ones styles the villa with subtle Abib details — present, not loud. The goal is to make Abib feel naturally part of the creators' Bali routine, not to dress the space as an event.</p>
+        <ul>
+          <li>Abib welcome kits in each room</li>
+          <li>Abib × Bali skincare station / product display</li>
+          <li>Soft neutral fabric · warm natural light · vanity setup</li>
+          <li>Poolside Sunstick moment · nighttime PDRN reset setup</li>
+          <li>Campaign merch placed naturally — not staged</li>
+        </ul>
       </div>
-      <div class="concept-card">
-        <div class="concept-num">Merch 02 · Print</div>
-        <h3 class="h3">Posters + welcome cards</h3>
-        <p>One signature poster per creator's room. Hand-typed welcome card. Becomes a natural content moment when each creator films their arrival.</p>
-      </div>
-      <div class="concept-card">
-        <div class="concept-num">Merch 03 · Packaging</div>
-        <h3 class="h3">Custom box for the package</h3>
-        <p>Custom Abib × Bali product box housing the welcome set. Becomes the literal hero of the unboxing content. Possibly reusable as retail packaging for the future "Abib Bali Kit" set.</p>
+      <div class="split-card">
+        <div class="split-eyebrow">Merch · Subtle, wearable</div>
+        <h3>Something the creators would actually wear.</h3>
+        <p>Abib × Bali merch should not feel like event staff uniforms. It should feel like something a creator would put on for a real summer day — small mark, soft typography, neutral palette.</p>
+        <ul>
+          <li>Cream or off-white T-shirts · minimal typography</li>
+          <li>Small "Abib × Bali" mark · cap or tote optional</li>
+          <li>Travel pouch for the Skin Reset Kit</li>
+          <li>Worn across the trip = Abib visible without forced placement</li>
+        </ul>
       </div>
     </div>
   </div>
 </section>
 
 <!-- 08 · TIMELINE -->
-<section class="section alt" id="timeline">
+<section class="section" id="timeline">
   <div class="container">
-    <div class="section-num">07 · The Timeline</div>
-    <h2 class="h2">Trip mid-July. <span class="accent">Content rolls out July → September.</span></h2>
-    <p class="lead" style="margin-top: 22px;">The trip is one moment. The content arc is two months. Posts staggered to ride Abib's summer push (sunsticks, Hyaluronic Boom, PDRN pre-order) and carry awareness into the August-September product launches.</p>
+    <div class="section-num">08 · Rollout</div>
+    <h2 class="h2">Trip is one moment. <span class="accent">Content arc is two months.</span></h2>
+    <p class="lead" style="margin-top: 22px;">The Bali trip creates the content. The rollout turns it into a campaign. Posts staggered across Abib's summer push and into back-to-routine August.</p>
 
     <div class="timeline-table">
       <div class="timeline-row">
         <div class="phase">Pre · June</div>
         <div class="when">June 2026</div>
-        <div class="what">Creator confirmation (Creator #4). Package design + custom merch production. Bali villa booking + flight coordination. Product shipment to villa.</div>
+        <div class="what">Creator #4 confirmation. Skin Reset Kit design. Villa booking + flights. Creator briefing. Content angles assigned. Optional teaser Stories.</div>
       </div>
       <div class="timeline-row">
         <div class="phase">Pre · Early July</div>
         <div class="when">Early July</div>
-        <div class="what">Final brief development per creator. Content angles locked. Creators receive a pre-trip teaser brief (one Story / one feed post per creator, alluding to "something coming").</div>
+        <div class="what">Final brief per creator. Product shipment to villa. Pre-trip teaser posts (one per creator) alluding to "something coming."</div>
       </div>
       <div class="timeline-row highlight">
         <div class="phase">★ Trip · Mid-July</div>
-        <div class="when">3 Nights / 4 Days</div>
-        <div class="what">Bali production window. All filming captured. Live Stories from each creator throughout the trip. Group "moment" content shot mid-trip during peak golden-hour days.</div>
+        <div class="when">4 Nights / 5 Days</div>
+        <div class="what">Bali production window. Villa setup · room package reveal · solo content capture · group viral Reel capture · BTS · long-form filming · live Stories.</div>
       </div>
       <div class="timeline-row">
         <div class="phase">Post · Late July</div>
         <div class="when">Wk 1–2 post-trip</div>
-        <div class="what">Solo short-form edits delivered. First two creators publish solo pieces. Sunstick / lip mask focus aligns with peak summer.</div>
+        <div class="what">First solo short-form pieces publish. Sunstick + summer focus aligns with peak season demand.</div>
       </div>
       <div class="timeline-row">
         <div class="phase">Post · August</div>
         <div class="when">Wk 3–5 post-trip</div>
-        <div class="what">Remaining solo pieces + collab piece publish. Coincides with Abib's August summer-end / back-to-routine wave. "Abib × Bali Kit" launches on site as the retail extension of the package concept.</div>
+        <div class="what">Remaining solo pieces + group viral Reels publish. Abib Bali Skin Reset Kit launches on Abib DTC + Amazon storefront. Owned-channel reposts. Optional paid boosting.</div>
       </div>
       <div class="timeline-row">
         <div class="phase">Post · September</div>
         <div class="when">Wk 6+ post-trip</div>
-        <div class="what">Long-form trip film publishes — the anchor case study. Carries momentum into Abib's fall product launches (PDRN cream full launch, anti-aging lines).</div>
+        <div class="what">Long-form campaign film publishes — the anchor case study. Carries momentum into Abib's fall product launches. Campaign recap delivered.</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 09 · BUDGET -->
-<section class="section" id="budget">
+<!-- 09 · INVESTMENT -->
+<section class="section alt" id="budget">
   <div class="container">
-    <div class="section-num">08 · The Investment</div>
-    <h2 class="h2">All-in figure. <span class="accent">One number.</span></h2>
-    <p class="lead" style="margin-top: 22px;">A single total for the full campaign — production, creators, agency. Internal line items below for clarity. This is a starting figure; final scope confirmed in Discovery call.</p>
+    <div class="section-num">09 · Investment</div>
+    <h2 class="h2">Three packages. <span class="accent">All-in figures.</span></h2>
+    <p class="lead" style="margin-top: 22px;">Presented as an all-in package, not separate creator bookings. Abib is paying for: creator negotiations, campaign strategy, Bali production planning, villa setup, creator management, on-site production, product integration, content direction, group viral concept development, long-form filming, content rollout, campaign recap, travel production, and the Skin Reset Kit concept.</p>
 
-    <div class="budget-block">
-      <div class="budget-top">
-        <div>
-          <div class="total">~$125K</div>
-          <div class="total-label">All-In · USD · Starting Figure</div>
-        </div>
-        <p>Production + four creators + agency. Includes Bali villa, flights for 7 (4 creators + 3 SO managers), food/beverage, custom merch, ground transport, all creator fees for 6 finished pieces, agency strategy + production management.</p>
+    <div class="pricing-grid">
+
+      <div class="pricing-tier">
+        <div class="tier-label">Option A · Lean</div>
+        <div class="tier-amount">$80K</div>
+        <div class="tier-description">All-In · USD</div>
+        <div class="tier-headline">Lean short-form awareness.</div>
+        <ul>
+          <li>4 creators</li>
+          <li>4 solo short-form videos</li>
+          <li>1 group viral Reel</li>
+          <li>Basic villa setup</li>
+          <li>Abib welcome kits</li>
+          <li>Basic merch</li>
+          <li>Travel production costs</li>
+          <li>SO on-site management</li>
+          <li>Basic campaign recap</li>
+        </ul>
       </div>
-      <div class="budget-rows">
-        <div class="budget-row">
-          <div>
-            <div class="item-name">Flights · 7 people</div>
-            <div class="item-note">US / Korea → Bali round trip</div>
-          </div>
-          <div class="item-amount">$8K–$10K</div>
-        </div>
-        <div class="budget-row">
-          <div>
-            <div class="item-name">Villa · 5–6 BR · 3 nights</div>
-            <div class="item-note">Single property hosting full group</div>
-          </div>
-          <div class="item-amount">$2K–$3K</div>
-        </div>
-        <div class="budget-row">
-          <div>
-            <div class="item-name">F&B · Trip duration</div>
-            <div class="item-note">Daily meals + group dinners + on-set catering</div>
-          </div>
-          <div class="item-amount">$3.5K</div>
-        </div>
-        <div class="budget-row">
-          <div>
-            <div class="item-name">Custom Abib × Bali merch + packaging</div>
-            <div class="item-note">T-shirts, hats, posters, custom box, welcome cards</div>
-          </div>
-          <div class="item-amount">$1K–$2.5K</div>
-        </div>
-        <div class="budget-row">
-          <div>
-            <div class="item-name">Transportation · Local Bali</div>
-            <div class="item-note">Rental car + driver / Uber</div>
-          </div>
-          <div class="item-amount">$500–$800</div>
-        </div>
-        <div class="budget-row">
-          <div>
-            <div class="item-name">Creator content fees · 4 creators</div>
-            <div class="item-note">Bundle rate (1 solo + 1 collab share + 1 long-form share per creator)</div>
-          </div>
-          <div class="item-amount">$80K–$90K</div>
-        </div>
-        <div class="budget-row">
-          <div>
-            <div class="item-name">Agency · Sensitive Ones</div>
-            <div class="item-note">Strategy, creator sourcing + management, on-site production, content delivery, campaign reporting</div>
-          </div>
-          <div class="item-amount">$20K–$25K</div>
-        </div>
+
+      <div class="pricing-tier recommended">
+        <div class="tier-recommend">Recommended</div>
+        <div class="tier-label">Option B · Best Value</div>
+        <div class="tier-amount">$90K</div>
+        <div class="tier-description">All-In · USD</div>
+        <div class="tier-headline">Short-form virality + long-term brand assets.</div>
+        <ul>
+          <li>4 creators</li>
+          <li>4 solo short-form videos</li>
+          <li><strong>2 group viral Reels</strong></li>
+          <li><strong>1 long-form campaign film</strong></li>
+          <li>Abib-themed villa setup</li>
+          <li>Abib × Bali merch</li>
+          <li><strong>Abib Bali Skin Reset Kit concept</strong></li>
+          <li>Travel production costs</li>
+          <li>SO on-site production team</li>
+          <li>Creator briefing + upload coordination</li>
+          <li>Campaign rollout strategy</li>
+          <li>Campaign recap</li>
+        </ul>
       </div>
+
+      <div class="pricing-tier">
+        <div class="tier-label">Option C · Full System</div>
+        <div class="tier-amount">$100K</div>
+        <div class="tier-description">All-In · USD</div>
+        <div class="tier-headline">Full brand-trip execution. Maximum reusable system.</div>
+        <ul>
+          <li>Everything in Option B, plus:</li>
+          <li>Additional BTS assets</li>
+          <li>Paid media-ready cutdowns</li>
+          <li>Abib owned-channel cutdowns</li>
+          <li>Deeper campaign reporting</li>
+          <li>Enhanced merch / package design</li>
+          <li>Stronger Skin Reset Kit launch support</li>
+          <li>Additional creator usage support</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="pricing-intro">
+      <strong>What Abib is paying for, in plain terms:</strong> a creator-led brand position. Not four sponsored posts. A campaign that gives Abib a story consumers can hold — that the brand is the reason the trip exists. Final scope confirmed in Discovery call.
     </div>
   </div>
 </section>
 
 <!-- 10 · WHY NOW -->
-<section class="section alt" id="why">
+<section class="section" id="why">
   <div class="container">
-    <div class="section-num">09 · Why Now</div>
-    <h2 class="h2">Three reasons <span class="accent">this campaign lands in July specifically.</span></h2>
+    <div class="section-num">10 · Why Now</div>
+    <h2 class="h2">Four reasons <span class="accent">the campaign lands in July specifically.</span></h2>
 
     <div class="why-grid">
       <div class="why-card">
         <div class="why-tag">Reason 01</div>
-        <h3>Sunstick season is right now.</h3>
-        <p>Abib's Airy + Quick sunsticks are peak-summer product. Bali is the literal use case. A US K-beauty consumer watching a creator apply Abib sunstick at a Bali beach is buying intent, not just brand awareness.</p>
+        <h3>Summer travel is the natural use case.</h3>
+        <p>Abib Sunstick needs a real summer setting. A Bali beach or pool villa makes the product immediately understandable. Audiences don't need to be told why they need it — they see the use case.</p>
       </div>
       <div class="why-card">
         <div class="why-tag">Reason 02</div>
-        <h3>PDRN cream is mid-launch.</h3>
-        <p>The PDRN Volume fill-it Booster crème is on 4th pre-order — "10K sold in first month." A campaign that introduces this product to US audiences via creator content right now extends that pre-order momentum into full launch.</p>
+        <h3>PDRN needs a recovery story.</h3>
+        <p>PDRN Cream becomes stronger when attached to a real skin moment: after sun, after heat, after travel, after a long day outside. Bali gives PDRN a reason to exist in the routine.</p>
       </div>
       <div class="why-card">
         <div class="why-tag">Reason 03</div>
-        <h3>Content rolls into Q3 windows.</h3>
-        <p>Trip mid-July → posts late July through September. Aligns with Abib's "Prep Your Summer Skin" wave, the just-launched Hyaluronic Boom line, and the natural transition into back-to-routine fall product launches.</p>
+        <h3>US K-beauty needs lifestyle context.</h3>
+        <p>Many US consumers know K-beauty products but don't always know when to use them. This campaign gives Abib a clear lifestyle position: the K-beauty skincare brand for summer travel.</p>
       </div>
+    </div>
+
+    <div class="statement" style="margin-top: clamp(28px, 3vw, 36px);">
+      A standard sponsored campaign creates awareness. A creator-led brand trip creates <strong>memory</strong>. When multiple creators show up in the same place, using the same products, inside the same Abib-hosted experience, the campaign feels bigger than a post. It feels like something happened. <strong>That is what makes people remember the brand.</strong>
+      <span class="cite">— Tarte's #trippinwithtarte trips generate 100M+ impressions per trip. Our scale is intentionally smaller — built for memory, not just reach.</span>
     </div>
   </div>
 </section>
 
 <!-- 11 · NEXT STEPS -->
-<section class="section" id="next">
+<section class="section alt" id="next">
   <div class="container">
-    <div class="section-num">10 · Next Steps</div>
+    <div class="section-num">11 · Next Steps</div>
     <h2 class="h2">From here <span class="accent">to a confirmed campaign.</span></h2>
 
     <div class="next-steps">
       <ol>
-        <li><span class="text"><strong>Concept feedback from Abib.</strong> Confirm the FIRST LIGHT direction, the product mix, and the trip structure. Adjust anywhere the brand sees a sharper angle.</span></li>
-        <li><span class="text"><strong>Budget alignment.</strong> Confirm the all-in figure works or scope to a different total. Single number, not line-item negotiation.</span></li>
-        <li><span class="text"><strong>Creator #4 sourcing + locking.</strong> Sensitive Ones sources and proposes 2–3 female creator candidates for the fourth slot, with media kits and recent work for Abib to choose from.</span></li>
-        <li><span class="text"><strong>Discovery call.</strong> 30 min with Abib team to lock product mix, packaging direction, custom merch design language, content content angles per creator.</span></li>
+        <li><span class="text"><strong>Concept feedback from Abib.</strong> Confirm the Bali Skin Reset direction, the two-product focus, and the package tier (A / B / C).</span></li>
+        <li><span class="text"><strong>Package selection.</strong> Lock Option A, B, or C. SO recommends Option B for best balance of short-form virality and long-term brand assets.</span></li>
+        <li><span class="text"><strong>Creator #4 sourcing.</strong> SO proposes 2–3 female creator candidates for the fourth slot, with media kits and recent work for Abib to choose from.</span></li>
+        <li><span class="text"><strong>Discovery call.</strong> 30 min — lock supporting product list, packaging direction for the Skin Reset Kit, custom merch design language, content angles per creator.</span></li>
         <li><span class="text"><strong>Agreement + start of production.</strong> Villa booking, creator contracts, merch into production, brief development. Within 5 business days of the discovery call.</span></li>
       </ol>
     </div>
@@ -919,8 +1084,9 @@ body {
         <span class="name">Sensitive Ones Agency</span>
       </div>
       <div class="signoff">
-        <div class="who">FIRST LIGHT</div>
-        <div class="role">Abib × Bali · July 2026 · Concept v1</div>
+        <div class="who">Abib Bali Skin Reset</div>
+        <div class="visual-tag">FIRST LIGHT · Visual Language</div>
+        <div class="role">Abib × Sensitive Ones · Bali, July 2026 · Concept v2</div>
       </div>
     </div>
     <div class="contact-block">
@@ -938,7 +1104,7 @@ body {
     </div>
   </div>
   <div class="footer-bottom-wrap">
-    <div class="footer-bottom">FIRST LIGHT · Abib × Sensitive Ones · Bali, July 2026 · Confidential · v1</div>
+    <div class="footer-bottom">Abib Bali Skin Reset · Sensitive Ones × Abib · July 2026 · Confidential · Concept v2</div>
   </div>
 </footer>
 
